@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trello Exporter</title>
+    <script>
+        var boardId = "VDaK4CVa";
+    </script>
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://api.trello.com/1/client.js?key=aa846c4392c2e7cdb3a996f2e7ae028d"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="loggedout">
+        <a id="connectLink" href="#">Connect To Trello</a>
+    </div>
+
+    <div id="loggedin">
+        <div id="header">
+            Logged in as <span id="fullName"></span>
+            <a id="disconnect" href="#">Log Out</a>
+        </div>
+
+        <div id="output"></div>
+    </div>
+</body>
+</html>

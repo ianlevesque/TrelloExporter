@@ -1,0 +1,13 @@
+#loggedin {
+    display: none;
+}
+
+#header {
+    padding: 4px;
+    border-bottom: 1px solid #000;
+    background: #eee;
+}
+
+#output {
+    padding: 4px;
+}
