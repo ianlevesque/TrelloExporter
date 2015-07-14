@@ -11,7 +11,8 @@ $(function() {
                 .appendTo("#output");
 
             Trello.get("boards/" + boardId + "/lists", function(lists) {
-                Trello.get("boards/" + boardId + "/cards", function(cards) {
+                Trello.get("boards/" + boardId + "/cards?members=true", function(cards) {
+                    console.log(cards);
                     $lists.empty();
 
                     $.each(lists, function(ix, list) {
@@ -31,6 +32,12 @@ $(function() {
                                     $("<span>")
                                         .text(card.name)
                                         .appendTo($cardInfo);
+
+                                    $.each(card.members, function(ix, member) {
+                                        $("<span>")
+                                            .text(" (" + member.fullName + ")")
+                                            .appendTo($cardInfo);
+                                    });
 
                                     $("<br>")
                                         .appendTo($cardInfo);
